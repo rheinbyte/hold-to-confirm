@@ -7,14 +7,16 @@ use RheinByte\HoldToConfirm\Exceptions\NotSupportedFeature;
 
 class HoldToConfirmAction extends Action
 {
-    public function configure(): static {
+    public function configure(): static
+    {
         return $this->view('rheinbyte::hold-to-confirm');
     }
 
     /**
      * @throws NotSupportedFeature
      */
-    public function iconButton(): static {
+    public function iconButton(): static
+    {
         throw NotSupportedFeature::make(
             'Icon buttons are currently not supported.'
         );
@@ -23,7 +25,8 @@ class HoldToConfirmAction extends Action
     /**
      * @throws NotSupportedFeature
      */
-    public function link(): static {
+    public function link(): static
+    {
         throw NotSupportedFeature::make(
             'Links are currently not supported.'
         );
@@ -32,7 +35,8 @@ class HoldToConfirmAction extends Action
     /**
      * @throws NotSupportedFeature
      */
-    public function grouped(): static {
+    public function grouped(): static
+    {
         throw NotSupportedFeature::make(
             'Groups are currently not supported.'
         );
