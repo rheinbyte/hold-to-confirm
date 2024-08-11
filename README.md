@@ -5,6 +5,8 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/rheinbyte/hold-to-confirm/fix-php-code-styling.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/rheinbyte/hold-to-confirm/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/rheinbyte/hold-to-confirm.svg?style=flat-square)](https://packagist.org/packages/rheinbyte/hold-to-confirm)
 
+![](art/hold-to-confirm.gif)
+
 ## TODO
 
 - Support iconButton and links
