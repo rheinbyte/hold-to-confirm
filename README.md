@@ -7,12 +7,13 @@
 
 ![](art/hold-to-confirm.gif)
 
-## TODO
+## Todos and problems to solve
 
-- Support iconButton and links
-- Support alpineClickHandler and href
-- Remove wire:ignore
-- Use tailwind instead of inline-styles
+- Support link button type and groups
+- Support dark mode
+- Support for Alpine directives and routes
+- There is room for improvement in the design and animation
+- It's a bit hacky at the moment how this package hooks into the wire:click event (see hold-to-confirm.js). However, a wire:ignore is currently necessary that every listener works. 
 
 ## Installation
 

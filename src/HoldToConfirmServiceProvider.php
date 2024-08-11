@@ -4,6 +4,7 @@ namespace RheinByte\HoldToConfirm;
 
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
+use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
@@ -57,6 +58,7 @@ class HoldToConfirmServiceProvider extends PackageServiceProvider
     {
         return [
             AlpineComponent::make('hold-to-confirm', __DIR__ . '/../resources/dist/hold-to-confirm.js'),
+            Css::make('hold-to-confirm', __DIR__ . '/../resources/dist/hold-to-confirm.css'),
         ];
     }
 }

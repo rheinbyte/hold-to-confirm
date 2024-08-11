@@ -23,8 +23,8 @@ const defaultOptions = {
     sourcemap: isDev ? 'inline' : false,
     sourcesContent: isDev,
     treeShaking: true,
-    target: ['es2020'],
-    minify: !isDev,
+    target: ['es2017'],
+    minify: false,
     plugins: [{
         name: 'watchPlugin',
         setup: function (build) {

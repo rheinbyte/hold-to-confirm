@@ -9,17 +9,12 @@ class HoldToConfirmAction extends Action
 {
     public function configure(): static
     {
-        return $this->view('rheinbyte::hold-to-confirm');
+        return $this->view('rheinbyte::hold-to-confirm-button-action');
     }
 
-    /**
-     * @throws NotSupportedFeature
-     */
     public function iconButton(): static
     {
-        throw NotSupportedFeature::make(
-            'Icon buttons are currently not supported.'
-        );
+        return $this->view('rheinbyte::hold-to-confirm-icon-button-action');
     }
 
     /**

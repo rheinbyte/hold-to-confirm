@@ -10,7 +10,7 @@ export default function holdToConfirm() {
         },
 
         findLivewireClickHandler() {
-            const element = this.$el.querySelector('[wire\\:click]');
+            let element = this.$el.querySelector('[wire\\:click]');
             this.livewireClickHandler = element.getAttribute('wire\:click');
 
             element.removeAttribute('wire\:click');
