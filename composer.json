@@ -34,8 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "RheinByte\\HoldToConfirm\\": "src/",
-            "RheinByte\\HoldToConfirm\\Database\\Factories\\": "database/factories/"
+            "RheinByte\\HoldToConfirm\\": "src/"
         }
     },
     "autoload-dev": {

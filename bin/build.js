@@ -45,6 +45,6 @@ const defaultOptions = {
 
 compile({
     ...defaultOptions,
-    entryPoints: ['./resources/js/index.js'],
+    entryPoints: ['./resources/js/hold-to-confirm.js'],
     outfile: './resources/dist/hold-to-confirm.js',
 })
