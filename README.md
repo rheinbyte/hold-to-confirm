@@ -1,13 +1,15 @@
-# Hold filament buttons to trigger an action.
+# Hold to confirm to trigger a Filament Action - under development
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/rheinbyte/hold-to-confirm.svg?style=flat-square)](https://packagist.org/packages/rheinbyte/hold-to-confirm)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/rheinbyte/hold-to-confirm/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/rheinbyte/hold-to-confirm/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/rheinbyte/hold-to-confirm/fix-php-code-styling.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/rheinbyte/hold-to-confirm/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/rheinbyte/hold-to-confirm.svg?style=flat-square)](https://packagist.org/packages/rheinbyte/hold-to-confirm)
 
+## TODO
 
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+- Support iconButton and links
+- Support alpineClickHandler and href
+- Remove wire:ignore
 
 ## Installation
 
@@ -17,37 +19,17 @@ You can install the package via composer:
 composer require rheinbyte/hold-to-confirm
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="hold-to-confirm-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="hold-to-confirm-config"
-```
-
 Optionally, you can publish the views using
 
 ```bash
 php artisan vendor:publish --tag="hold-to-confirm-views"
 ```
 
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
 ## Usage
 
 ```php
-$holdToConfirm = new RheinByte\HoldToConfirm();
-echo $holdToConfirm->echoPhrase('Hello, RheinByte!');
+HoldToConfirmAction::make('do something')
+    ->action(fn() => /* Doing something */)
 ```
 
 ## Testing

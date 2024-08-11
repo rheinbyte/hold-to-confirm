@@ -5,8 +5,6 @@ namespace RheinByte\HoldToConfirm;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Facades\FilamentAsset;
-use Livewire\Features\SupportTesting\Testable;
-use RheinByte\HoldToConfirm\Testing\TestsHoldToConfirm;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -45,8 +43,6 @@ class HoldToConfirmServiceProvider extends PackageServiceProvider
             $this->getAssets(),
             $this->getAssetPackageName()
         );
-
-        Testable::mixin(new TestsHoldToConfirm);
     }
 
     protected function getAssetPackageName(): ?string

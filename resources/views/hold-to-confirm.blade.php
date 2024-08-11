@@ -1,4 +1,5 @@
 <div
+    wire:ignore
     x-on:mousedown="start()"
     x-on:touchstart="start()"
     x-on:mouseup="stop()"
@@ -6,6 +7,7 @@
     ax-load
     ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('hold-to-confirm', 'rheinbyte/hold-to-confirm') }}"
     x-data="holdToConfirm()">
+
     <x-filament-actions::action
         :action="$action"
         :badge="$getBadge()"
