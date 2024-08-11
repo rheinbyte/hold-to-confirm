@@ -2,6 +2,4 @@
 
 namespace RheinByte\HoldToConfirm;
 
-class HoldToConfirm
-{
-}
+class HoldToConfirm {}
