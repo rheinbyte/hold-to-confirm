@@ -19,12 +19,6 @@ You can install the package via composer:
 composer require rheinbyte/hold-to-confirm
 ```
 
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="hold-to-confirm-views"
-```
-
 ## Usage
 
 ```php
