@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace RheinByte\HoldToConfirm\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class HoldToConfirmCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'hold-to-confirm';
 
     public $description = 'My command';
 

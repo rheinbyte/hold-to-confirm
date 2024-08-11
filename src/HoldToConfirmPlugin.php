@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace RheinByte\HoldToConfirm;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class SkeletonPlugin implements Plugin
+class HoldToConfirmPlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'skeleton';
+        return 'hold-to-confirm';
     }
 
     public function register(Panel $panel): void

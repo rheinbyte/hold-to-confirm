@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace RheinByte\HoldToConfirm;
 
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
@@ -13,14 +13,14 @@ use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
-use VendorName\Skeleton\Testing\TestsSkeleton;
+use RheinByte\HoldToConfirm\Commands\HoldToConfirmCommand;
+use RheinByte\HoldToConfirm\Testing\TestsHoldToConfirm;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class HoldToConfirmServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'skeleton';
+    public static string $name = 'hold-to-confirm';
 
-    public static string $viewNamespace = 'skeleton';
+    public static string $viewNamespace = 'hold-to-confirm';
 
     public function configurePackage(Package $package): void
     {
@@ -36,7 +36,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub(':vendor_slug/:package_slug');
+                    ->askToStarRepoOnGitHub('rheinbyte/hold-to-confirm');
             });
 
         $configFileName = $package->shortName();
@@ -58,7 +58,9 @@ class SkeletonServiceProvider extends PackageServiceProvider
         }
     }
 
-    public function packageRegistered(): void {}
+    public function packageRegistered(): void
+    {
+    }
 
     public function packageBooted(): void
     {
@@ -80,18 +82,18 @@ class SkeletonServiceProvider extends PackageServiceProvider
         if (app()->runningInConsole()) {
             foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
                 $this->publishes([
-                    $file->getRealPath() => base_path("stubs/skeleton/{$file->getFilename()}"),
-                ], 'skeleton-stubs');
+                    $file->getRealPath() => base_path("stubs/hold-to-confirm/{$file->getFilename()}"),
+                ], 'hold-to-confirm-stubs');
             }
         }
 
         // Testing
-        Testable::mixin(new TestsSkeleton);
+        Testable::mixin(new TestsHoldToConfirm());
     }
 
     protected function getAssetPackageName(): ?string
     {
-        return ':vendor_slug/:package_slug';
+        return 'rheinbyte/hold-to-confirm';
     }
 
     /**
@@ -100,9 +102,9 @@ class SkeletonServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            // AlpineComponent::make('skeleton', __DIR__ . '/../resources/dist/components/skeleton.js'),
-            Css::make('skeleton-styles', __DIR__ . '/../resources/dist/skeleton.css'),
-            Js::make('skeleton-scripts', __DIR__ . '/../resources/dist/skeleton.js'),
+            // AlpineComponent::make('hold-to-confirm', __DIR__ . '/../resources/dist/components/hold-to-confirm.js'),
+            Css::make('hold-to-confirm-styles', __DIR__ . '/../resources/dist/hold-to-confirm.css'),
+            Js::make('hold-to-confirm-scripts', __DIR__ . '/../resources/dist/hold-to-confirm.js'),
         ];
     }
 
@@ -112,7 +114,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
     protected function getCommands(): array
     {
         return [
-            SkeletonCommand::class,
+            HoldToConfirmCommand::class,
         ];
     }
 
@@ -146,7 +148,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
     protected function getMigrations(): array
     {
         return [
-            'create_skeleton_table',
+            'create_hold-to-confirm_table',
         ];
     }
 }
