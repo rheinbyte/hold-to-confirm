@@ -12,6 +12,7 @@
 - Support iconButton and links
 - Support alpineClickHandler and href
 - Remove wire:ignore
+- Use tailwind instead of inline-styles
 
 ## Installation
 
